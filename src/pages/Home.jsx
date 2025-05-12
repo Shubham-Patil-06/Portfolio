@@ -2,7 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope, FaCode, FaServer, FaRobot } from "react-icons/fa";
 import { SiDjango, SiReact, SiTailwindcss, SiPython } from "react-icons/si";
-import profilePhoto from "../assets/profile.jpg";
+import profilePhoto from "../assets/Profile.jpg";
 
 const LandingPage = () => {
     const controls = useAnimation();
