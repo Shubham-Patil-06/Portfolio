@@ -6,9 +6,22 @@ const Experience = () => {
     const experiences = [
         {
             type: "work",
+            role: "Django Python Developer Intern",
+            company: "A plus topper",
+            duration: "June,2025 - Present",
+            description: [
+                "Designed and automated real-time trading algorithms using Chartink, Brokers, and TradingView APIs",
+                "Integrated broker APIs to automate execution, improving trading speed and accuracy by 20%",
+                "Built backend systems for automated PnL reporting, alerts, and strategy testing."
+            ],
+            tech: [<SiPython />, <SiDjango />, <SiReact />, <FaRobot />],
+            icon: <FaBriefcase className="text-blue-400" />
+        },
+        {
+            type: "work",
             role: "Python Developer Intern",
             company: "Brain Vision Technology",
-            duration: "Jan,2025 - Present",
+            duration: "Jan,2025 - June,2025",
             description: [
                 "Developed computer vision applications using Python and OpenCV",
                 "Optimized ML model performance by 30% through algorithm refinement",
@@ -38,7 +51,7 @@ const Experience = () => {
             achievements: [
                 "Specialized in Machine Learning and Distributed Systems",
                 "Thesis on 'Optimizing Recommendation Systems with Hybrid Algorithms'",
-                "GPA: 8.64/10"
+                "GPA: 8.73/10"
             ],
             tech: [<SiPython />, <SiTensorflow />, <FaServer />],
             icon: <FaGraduationCap className="text-purple-400" />
