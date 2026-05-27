@@ -1,7 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope, FaCode, FaServer, FaRobot } from "react-icons/fa";
-import { SiDjango, SiReact, SiTailwindcss, SiPython } from "react-icons/si";
+import { SiDjango, SiReact, SiFastapi, SiPython, SiPostgresql, SiDocker } from "react-icons/si";
 import profilePhoto from "../assets/Profile.jpg";
 
 const LandingPage = () => {
@@ -19,10 +19,12 @@ const LandingPage = () => {
     }, [controls]);
 
     const techStack = [
-        { icon: <SiReact size={24} />, name: "React" },
-        { icon: <SiDjango size={24} />, name: "Django" },
         { icon: <SiPython size={24} />, name: "Python" },
-        { icon: <SiTailwindcss size={24} />, name: "Tailwind" },
+        { icon: <SiDjango size={24} />, name: "Django" },
+        { icon: <SiFastapi size={24} />, name: "FastAPI" },
+        { icon: <SiReact size={24} />, name: "ReactJS" },
+        { icon: <SiPostgresql size={24} />, name: "PostgreSQL" },
+        { icon: <SiDocker size={24} />, name: "Docker" },
     ];
 
     return (
@@ -89,7 +91,7 @@ const LandingPage = () => {
                             transition={{ delay: 0.5 }}
                         >
                             <div className="h-1 w-16 bg-blue-400 mr-4"></div>
-                            <h2 className="text-2xl text-blue-300">Full Stack Developer</h2>
+                            <h2 className="text-2xl text-blue-300">Python Backend Developer · Fintech & API Systems</h2>
                         </motion.div>
 
                         <motion.p
@@ -98,8 +100,10 @@ const LandingPage = () => {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.7 }}
                         >
-                            Building digital experiences that matter. Specializing in ReactJS, Django,
-                            and Machine Learning solutions that solve real-world problems.
+                            Backend-focused engineer with production experience architecting high-throughput
+                            trading platforms, real-time WebSocket systems, and scalable REST APIs using
+                            Python (Django, FastAPI, Flask). Built and deployed algostraddle.com — a live
+                            algorithmic trading platform handling 1,000+ concurrent requests.
                         </motion.p>
 
                         <motion.div
@@ -114,7 +118,7 @@ const LandingPage = () => {
                             <a href="https://www.linkedin.com/in/shubham-patil-039aa135a/" className="social-icon">
                                 <FaLinkedin size={24} />
                             </a>
-                            <a href="mailto:shubham.work.06@gmail.com" className="social-icon">
+                            <a href="mailto:shubham.patil.work06@gmail.com" className="social-icon">
                                 <FaEnvelope size={24} />
                             </a>
                         </motion.div>
@@ -153,9 +157,9 @@ const LandingPage = () => {
                                 >
                                     <FaServer className="text-green-400 mt-1 mr-3" />
                                     <div>
-                                        <h4 className="font-bold">Backend Expertise</h4>
+                                        <h4 className="font-bold">Fintech & Trading Systems</h4>
                                         <p className="text-sm opacity-80">
-                                            Robust API development with Django REST Framework
+                                            High-throughput WebSocket systems, broker API integration, sub-second order execution
                                         </p>
                                     </div>
                                 </motion.div>
@@ -166,9 +170,9 @@ const LandingPage = () => {
                                 >
                                     <FaRobot className="text-purple-400 mt-1 mr-3" />
                                     <div>
-                                        <h4 className="font-bold">AI/ML Integration</h4>
+                                        <h4 className="font-bold">ML-Driven Products</h4>
                                         <p className="text-sm opacity-80">
-                                            Building intelligent systems with Python
+                                            LightGBM, LSTM, TensorFlow — backtesting engines to price intelligence platforms
                                         </p>
                                     </div>
                                 </motion.div>

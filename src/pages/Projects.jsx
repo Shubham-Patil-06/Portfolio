@@ -1,21 +1,23 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaCode, FaServer, FaMobile, FaDatabase } from "react-icons/fa";
-import { SiDjango, SiReact, SiTailwindcss, SiPython, SiPostgresql, SiTensorflow } from "react-icons/si";
+import { SiDjango, SiReact, SiTailwindcss, SiPython, SiPostgresql, SiTensorflow, SiFastapi } from "react-icons/si";
 
 const Projects = () => {
   const projects = [
     {
-      title: "ChopChop - Food Delivery App",
-      description: "Full-stack food delivery platform with integrated digital wallet payments",
+      title: "ChopChop — Food Delivery Platform",
+      description: "Production-ready full-stack food delivery platform with OTP + JWT auth, real-time order tracking, and Razorpay payment gateway integration.",
       features: [
-        "Real-time order tracking",
-        "Restaurant management dashboard",
-        "Secure payment processing"
+        "OTP + JWT authentication & secure sessions",
+        "Razorpay webhook-based order confirmation",
+        "~35% API response time reduction via query optimisation & caching",
+        "Animated UI with Tailwind CSS & Framer Motion"
       ],
       tech: [
-        { icon: <SiReact className="text-blue-400" />, name: "React" },
+        { icon: <SiReact className="text-blue-400" />, name: "ReactJS" },
         { icon: <SiDjango className="text-green-500" />, name: "Django" },
-        { icon: <SiPostgresql className="text-blue-600" />, name: "PostgreSQL" }
+        { icon: <SiPostgresql className="text-blue-600" />, name: "PostgreSQL" },
+        { icon: <SiTailwindcss className="text-cyan-400" />, name: "Tailwind CSS" }
       ],
       links: [
         { icon: <FaGithub />, url: "https://github.com/Shubham-Patil-06/ChopChop", label: "Code" },
@@ -24,17 +26,19 @@ const Projects = () => {
       category: "fullstack"
     },
     {
-      title: "Movie Recommender System",
-      description: "AI-powered recommendation engine for OTT platforms",
+      title: "MandiMind — Agricultural Price Intelligence",
+      description: "AI-driven mandi price aggregation platform for Indian farmers, FPOs, and commodity traders, pulling and normalising government AgMarkNet data.",
       features: [
-        "Content-based filtering",
-        "Collaborative filtering",
-        "Personalized suggestions"
+        "LightGBM + LSTM ensemble for short-term price forecasting",
+        "Seasonal trend analysis for proactive sell/hold decisions",
+        "Programmatic SEO at scale targeting high-volume 'mandi bhav' searches",
+        "Covers thousands of mandis and crop varieties across India"
       ],
       tech: [
         { icon: <SiPython className="text-yellow-400" />, name: "Python" },
-        { icon: <SiTensorflow className="text-orange-500" />, name: "TensorFlow" },
-        { icon: <FaDatabase className="text-blue-300" />, name: "Neo4j" }
+        { icon: <SiDjango className="text-green-500" />, name: "Django" },
+        { icon: <SiTensorflow className="text-orange-500" />, name: "LightGBM / LSTM" },
+        { icon: <SiPostgresql className="text-blue-600" />, name: "PostgreSQL" }
       ],
       links: [
         { icon: <FaGithub />, url: "#", label: "Code" },
@@ -43,21 +47,22 @@ const Projects = () => {
       category: "ai"
     },
     {
-      title: "Restme - API Service",
-      description: "Scalable REST API service for mobile applications",
+      title: "AlgoStraddle — Algorithmic Trading Platform",
+      description: "Live algorithmic trading platform handling 1,000+ concurrent requests with sub-second order execution across Zerodha Kite, Flattrade, and Delta Exchange.",
       features: [
-        "JWT Authentication",
-        "Rate limiting",
-        "Automated documentation"
+        "Webhook engine translating TradingView alerts into instant broker orders",
+        "Real-time Live Chart dashboards and Historical Data Analytics",
+        "Automated PnL reporting and configurable backtesting engine",
+        "Horizontally scalable — zero downtime during high-frequency trading windows"
       ],
       tech: [
-        { icon: <FaServer className="text-purple-400" />, name: "Node.js" },
-        { icon: <FaDatabase className="text-green-400" />, name: "MongoDB" },
-        { icon: <SiPython className="text-yellow-400" />, name: "Python" }
+        { icon: <SiPython className="text-yellow-400" />, name: "Python" },
+        { icon: <SiDjango className="text-green-500" />, name: "Django" },
+        { icon: <SiFastapi className="text-teal-400" />, name: "FastAPI" },
+        { icon: <FaServer className="text-purple-400" />, name: "WebSocket" }
       ],
       links: [
-        { icon: <FaGithub />, url: "#", label: "Code" },
-        { icon: <FaExternalLinkAlt />, url: "#", label: "API Docs" }
+        { icon: <FaExternalLinkAlt />, url: "https://algostraddle.com", label: "Live Site" }
       ],
       category: "backend"
     }

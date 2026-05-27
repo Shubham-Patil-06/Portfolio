@@ -84,7 +84,7 @@ const Contact = () => {
                         </div>
 
                         <motion.button
-                            href="mailto:shubham.work.06@gmail.com"
+                            href="mailto:shubham.patil.work06@gmail.com"
                             type="submit"
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.97 }}
@@ -108,7 +108,7 @@ const Contact = () => {
 
                         <div className="space-y-4">
                             <motion.a
-                                href="mailto:shubham.work.06@gmail.com"
+                                href="mailto:shubham.patil.work06@gmail.com"
                                 whileHover={{ x: 5 }}
                                 className="flex items-center text-gray-300 hover:text-white transition-colors"
                             >
@@ -144,7 +144,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <p className="text-sm text-gray-400">Location</p>
-                                    <p>Pune, India</p>
+                                    <p>Hyderabad, India</p>
                                 </div>
                             </motion.div>
                         </div>

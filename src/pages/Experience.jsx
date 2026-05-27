@@ -1,59 +1,48 @@
 import { motion } from "framer-motion";
 import { FaBriefcase, FaGraduationCap, FaCode, FaServer, FaRobot } from "react-icons/fa";
-import { SiDjango, SiReact, SiPython, SiTensorflow, SiPostgresql } from "react-icons/si";
+import { SiDjango, SiReact, SiPython, SiTensorflow, SiPostgresql, SiFastapi, SiDocker } from "react-icons/si";
 
 const Experience = () => {
     const experiences = [
         {
             type: "work",
-            role: "Django Python Developer Intern",
-            company: "A plus topper",
-            duration: "June,2025 - Present",
+            role: "Python Django Developer",
+            company: "A Plus Topper",
+            duration: "June 2025 – Present · Hyderabad, India",
             description: [
-                "Designed and automated real-time trading algorithms using Chartink, Brokers, and TradingView APIs",
-                "Integrated broker APIs to automate execution, improving trading speed and accuracy by 20%",
-                "Built backend systems for automated PnL reporting, alerts, and strategy testing."
+                "Architected and deployed algostraddle.com — a full-featured algorithmic trading platform integrating Zerodha Kite, Flattrade, and Delta Exchange broker APIs end-to-end",
+                "Engineered a high-performance Webhook Execution Engine translating TradingView alerts into sub-second broker order placements, minimising slippage during volatile market conditions",
+                "Designed a horizontally scalable backend sustaining 1,000+ concurrent user sessions with zero downtime during high-frequency trading windows",
+                "Built real-time Live Chart dashboards and Historical Data Analytics modules for position visualisation and backtested performance analysis",
+                "Developed automated strategy execution, dynamic real-time PnL reporting, and a fully integrated backtesting engine with configurable parameters",
+                "Optimised API middleware for high-frequency data polling and WebSocket stream management — reducing latency and improving trade execution reliability"
             ],
-            tech: [<SiPython />, <SiDjango />, <SiReact />, <FaRobot />],
-            icon: <FaBriefcase className="text-blue-400" />
-        },
-        {
-            type: "work",
-            role: "Python Developer Intern",
-            company: "Brain Vision Technology",
-            duration: "Jan,2025 - June,2025",
-            description: [
-                "Developed computer vision applications using Python and OpenCV",
-                "Optimized ML model performance by 30% through algorithm refinement",
-                "Implemented REST APIs with Django for AI service integration"
-            ],
-            tech: [<SiPython />, <SiDjango />, <FaRobot />],
-            icon: <FaBriefcase className="text-blue-400" />
-        },
-        {
-            type: "work",
-            role: "Software Trainee Intern",
-            company: "Tayan Solutions",
-            duration: "April,2024 - May,2024",
-            description: [
-                "Built full-stack features using React and Django",
-                "Reduced API response time by 40% through query optimization",
-                "Implemented JWT authentication for secure user sessions"
-            ],
-            tech: [<SiReact />, <SiDjango />, <SiPostgresql />],
+            tech: [<SiPython />, <SiDjango />, <SiFastapi />, <SiReact />, <SiPostgresql />, <SiDocker />],
             icon: <FaBriefcase className="text-blue-400" />
         },
         {
             type: "education",
-            degree: "MSc Computer Science",
-            institution: "Vishwakarma College",
-            duration: "2023 - 2025",
+            degree: "M.Sc. in Computer Science",
+            institution: "Vishwakarma College of Arts, Commerce & Science, Pune",
+            duration: "2023 – 2025",
             achievements: [
+                "CGPA: 8.73 / 10",
                 "Specialized in Machine Learning and Distributed Systems",
-                "Thesis on 'Optimizing Recommendation Systems with Hybrid Algorithms'",
-                "GPA: 8.73/10"
+                "Built production-grade fintech and AI-driven platforms as part of applied coursework"
             ],
             tech: [<SiPython />, <SiTensorflow />, <FaServer />],
+            icon: <FaGraduationCap className="text-purple-400" />
+        },
+        {
+            type: "education",
+            degree: "B.Sc. in Computer Science",
+            institution: "Shivaji University, Kolhapur",
+            duration: "2020 – 2023",
+            achievements: [
+                "CGPA: 9.34 / 10",
+                "Strong foundation in algorithms, data structures, and software engineering principles"
+            ],
+            tech: [<SiPython />, <SiReact />, <SiPostgresql />],
             icon: <FaGraduationCap className="text-purple-400" />
         }
     ];
@@ -155,12 +144,14 @@ const Experience = () => {
                 </h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     {[
-                        { icon: <SiReact className="text-blue-400 text-2xl" />, name: "React Development" },
-                        { icon: <SiDjango className="text-green-500 text-2xl" />, name: "Django Backend" },
-                        { icon: <SiPython className="text-yellow-400 text-2xl" />, name: "Python Programming" },
-                        { icon: <FaServer className="text-purple-400 text-2xl" />, name: "API Design" },
-                        { icon: <SiTensorflow className="text-orange-500 text-2xl" />, name: "Machine Learning" },
-                        { icon: <SiPostgresql className="text-blue-600 text-2xl" />, name: "Database Architecture" }
+                        { icon: <SiPython className="text-yellow-400 text-2xl" />, name: "Python" },
+                        { icon: <SiDjango className="text-green-500 text-2xl" />, name: "Django / FastAPI / Flask" },
+                        { icon: <SiReact className="text-blue-400 text-2xl" />, name: "ReactJS" },
+                        { icon: <FaServer className="text-purple-400 text-2xl" />, name: "REST API & WebSocket" },
+                        { icon: <SiTensorflow className="text-orange-500 text-2xl" />, name: "ML · LightGBM · LSTM" },
+                        { icon: <SiPostgresql className="text-blue-600 text-2xl" />, name: "PostgreSQL / MySQL" },
+                        { icon: <SiDocker className="text-cyan-400 text-2xl" />, name: "Docker · AWS · CI/CD" },
+                        { icon: <FaRobot className="text-pink-400 text-2xl" />, name: "Backtesting & Fintech" }
                     ].map((skill, i) => (
                         <motion.div
                             key={i}
