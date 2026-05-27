@@ -115,7 +115,7 @@ const LandingPage = () => {
                             <a href="https://github.com/Shubham-Patil-06" className="social-icon">
                                 <FaGithub size={24} />
                             </a>
-                            <a href="https://www.linkedin.com/in/shubham-patil-039aa135a/" className="social-icon">
+                            <a href="https://www.linkedin.com/in/shubhampatil-python-developer" className="social-icon">
                                 <FaLinkedin size={24} />
                             </a>
                             <a href="mailto:shubham.patil.work06@gmail.com" className="social-icon">

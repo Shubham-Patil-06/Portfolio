@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 const SocialIcons = () => {
     const socials = [
         { icon: <FaGithub />, url: "https://github.com/Shubham-Patil-06"},
-        { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/shubham-patil-039aa135a/"},
+        { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/shubhampatil-python-developer"},
         { icon: <FaEnvelope />, url: "mailto:shubham.work.06@gmail.com"}
     ];
 

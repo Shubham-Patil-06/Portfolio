@@ -157,7 +157,7 @@ const Contact = () => {
                         <div className="grid grid-cols-2 gap-4">
                             {[
                                 { icon: <FaGithub />, name: "GitHub", url: "https://github.com/Shubham-Patil-06", color: "bg-gray-900/20 text-gray-300" },
-                                { icon: <FaLinkedin />, name: "LinkedIn", url: "https://www.linkedin.com/in/shubham-patil-039aa135a/", color: "bg-blue-900/20 text-blue-400" },
+                                { icon: <FaLinkedin />, name: "LinkedIn", url: "https://www.linkedin.com/in/shubhampatil-python-developer", color: "bg-blue-900/20 text-blue-400" },
                                 { icon: <FaEnvelope />, name: "Email", url: "mailto:shubham.work.06@gmail.com", color: "bg-red-900/20 text-red-400" },
                                 { icon: <SiHackerrank />, name: "HackerRank", url: "https://leetcode.com", color: "bg-green-900/20 text-green-400" }
                             ].map((social, index) => (

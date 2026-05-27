@@ -83,7 +83,7 @@ const Navbar = () => {
                             <FaGithub size={18} />
                         </motion.a>
                         <motion.a
-                            href="https://www.linkedin.com/in/shubham-patil-039aa135a/"
+                            href="https://www.linkedin.com/in/shubhampatil-python-developer"
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ y: -2 }}
