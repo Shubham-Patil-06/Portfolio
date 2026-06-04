@@ -50,7 +50,7 @@ export default function Navbar() {
             <nav className="max-w-6xl mx-auto px-6 h-[70px] flex items-center justify-between">
                 <a href="#home" className="flex items-center gap-2">
                     <span
-                        className="font-mono font-bold text-lg w-10 h-10 grid place-items-center rounded-lg border"
+                        className="font-mono font-bold text-base w-10 h-10 flex items-center justify-center rounded-lg border leading-none whitespace-nowrap tracking-tight"
                         style={{ borderColor: "var(--bd-hover)" }}
                     >
                         <span className="accent">S</span>P
