@@ -91,7 +91,7 @@ const LandingPage = () => {
                             transition={{ delay: 0.5 }}
                         >
                             <div className="h-1 w-16 bg-blue-400 mr-4"></div>
-                            <h2 className="text-2xl text-blue-300">Python Backend Developer · Fintech & API Systems</h2>
+                            <h2 className="text-2xl text-blue-300">Python Backend Developer · Full-Stack Engineer · Fintech & API Systems</h2>
                         </motion.div>
 
                         <motion.p

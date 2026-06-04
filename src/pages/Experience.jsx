@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaBriefcase, FaGraduationCap, FaCode, FaServer, FaRobot } from "react-icons/fa";
+import { FaBriefcase, FaGraduationCap, FaCode, FaServer, FaRobot, FaCertificate } from "react-icons/fa";
 import { SiDjango, SiReact, SiPython, SiTensorflow, SiPostgresql, SiFastapi, SiDocker } from "react-icons/si";
 
 const Experience = () => {
@@ -160,6 +160,39 @@ const Experience = () => {
                         >
                             <div className="mr-3">{skill.icon}</div>
                             <span>{skill.name}</span>
+                        </motion.div>
+                    ))}
+                </div>
+            </motion.div>
+
+            {/* Certifications */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.9 }}
+                className="max-w-4xl mx-auto mt-12 bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 shadow-lg"
+            >
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                    <FaCertificate className="mr-2 text-blue-400" />
+                    Certifications
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {[
+                        { name: "Python for Everybody", issuer: "Coursera", year: "2024" },
+                        { name: "Full Stack Web Development", issuer: "freeCodeCamp", year: "2024" }
+                    ].map((cert, i) => (
+                        <motion.div
+                            key={i}
+                            whileHover={{ y: -5 }}
+                            className="flex items-center bg-gray-700/50 p-4 rounded-xl"
+                        >
+                            <div className="p-3 rounded-full bg-blue-900/20 text-blue-400 mr-4">
+                                <FaCertificate />
+                            </div>
+                            <div>
+                                <h4 className="font-bold text-white">{cert.name}</h4>
+                                <p className="text-sm text-gray-400">{cert.issuer} · {cert.year}</p>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
