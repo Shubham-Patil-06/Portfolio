@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaCode, FaServer, FaMobile, FaDatabase } from "react-icons/fa";
 import { SiDjango, SiReact, SiTailwindcss, SiPython, SiPostgresql, SiTensorflow, SiFastapi } from "react-icons/si";
+import TiltCard from "../components/TiltCard";
 
 const Projects = () => {
   const projects = [
@@ -89,13 +90,12 @@ const Projects = () => {
       {/* Projects Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
+          <TiltCard key={index} max={12} className="h-full">
           <motion.div
-            key={index}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            whileHover={{ y: -10 }}
-            className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+            className="h-full bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
           >
             {/* Project Header */}
             <div className="p-6 border-b border-gray-700">
@@ -168,6 +168,7 @@ const Projects = () => {
               </div>
             </div>
           </motion.div>
+          </TiltCard>
         ))}
       </div>
 

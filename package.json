@@ -11,13 +11,17 @@
     "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
+    "@react-three/postprocessing": "^3.0.4",
     "@tailwindcss/vite": "^4.1.6",
     "framer-motion": "^12.10.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.6.0",
-    "tailwindcss": "^4.1.6"
+    "tailwindcss": "^4.1.6",
+    "three": "^0.184.0"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.39.0",

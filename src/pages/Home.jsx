@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { FaGithub, FaLinkedin, FaEnvelope, FaCode, FaServer, FaRobot } from "react-icons/fa";
 import { SiDjango, SiReact, SiFastapi, SiPython, SiPostgresql, SiDocker } from "react-icons/si";
 import profilePhoto from "../assets/Profile.jpg";
+import Hero3DBackground from "../components/Hero3DBackground";
+import TiltCard from "../components/TiltCard";
 
 const LandingPage = () => {
     const controls = useAnimation();
@@ -28,32 +30,9 @@ const LandingPage = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-800">
-            {/* Animated Background Elements */}
-            <div className="fixed inset-0 overflow-hidden opacity-20">
-                {[...Array(20)].map((_, i) => (
-                    <motion.div
-                        key={i}
-                        className="absolute bg-blue-500 rounded-full"
-                        style={{
-                            width: Math.random() * 10 + 5,
-                            height: Math.random() * 10 + 5,
-                            left: `${Math.random() * 100}%`,
-                            top: `${Math.random() * 100}%`,
-                        }}
-                        animate={{
-                            y: [0, (Math.random() - 0.5) * 100],
-                            x: [0, (Math.random() - 0.5) * 100],
-                            opacity: [0.2, 0.8, 0.2],
-                        }}
-                        transition={{
-                            duration: Math.random() * 10 + 10,
-                            repeat: Infinity,
-                            repeatType: "reverse",
-                        }}
-                    />
-                ))}
-            </div>
+        <div className="min-h-screen">
+            {/* Immersive 3D background (falls back to CSS on low-power / reduced-motion) */}
+            <Hero3DBackground />
 
             <div className="relative z-10 container mx-auto px-6 py-24">
                 <motion.div
@@ -63,17 +42,14 @@ const LandingPage = () => {
                 >
                     {/* Profile Section */}
                     <div className="flex-1">
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                            className="relative mb-8"
-                        >
+                        <TiltCard max={18} glare={false} className="relative mb-8 w-64 h-64">
                             <div className="absolute -inset-2 bg-blue-500 rounded-full blur opacity-75 animate-pulse"></div>
                             <img
                                 src={profilePhoto}
                                 alt="Shubham Prabhakar Patil"
                                 className="relative w-64 h-64 rounded-full object-cover border-4 border-white shadow-xl"
                             />
-                        </motion.div>
+                        </TiltCard>
 
                         <motion.h1
                             className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
@@ -126,6 +102,7 @@ const LandingPage = () => {
 
                     {/* Tech Showcase */}
                     <div className="flex-1">
+                      <TiltCard max={10}>
                         <motion.div
                             className="glass-card p-8 rounded-3xl shadow-2xl"
                             initial={{ opacity: 0, x: 100 }}
@@ -178,6 +155,7 @@ const LandingPage = () => {
                                 </motion.div>
                             </div>
                         </motion.div>
+                      </TiltCard>
 
                         {/* Call to Action */}
                         <motion.div
