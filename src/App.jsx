@@ -6,6 +6,7 @@ import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import Certifications from "./sections/Certifications";
 import Contact from "./sections/Contact";
+import GuideAvatar from "./components/GuideAvatar";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Certifications />
         <Contact />
       </main>
+      <GuideAvatar />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import SectionHeading from "../components/SectionHeading";
 import Reveal from "../components/Reveal";
-import profilePhoto from "../assets/Profile.jpg";
 
 const METRICS = [
     { value: "1,000+", label: "Concurrent requests handled" },
@@ -42,14 +41,26 @@ export default function About() {
                     </Reveal>
 
                     <Reveal delay={0.15}>
-                        <div className="relative">
-                            <div className="absolute -inset-1 rounded-xl opacity-30" style={{ background: "var(--ac)", filter: "blur(24px)" }} />
-                            <img
-                                src={profilePhoto}
-                                alt="Shubham Patil"
-                                className="relative rounded-xl w-full max-w-[280px] mx-auto object-cover border"
-                                style={{ borderColor: "var(--bd)" }}
-                            />
+                        <div className="card overflow-hidden font-mono text-[13px]">
+                            {/* terminal title bar */}
+                            <div className="flex items-center gap-2 px-4 py-2.5 border-b" style={{ borderColor: "var(--bd)", background: "#0d0d0d" }}>
+                                <span className="w-3 h-3 rounded-full" style={{ background: "#ff5f56" }} />
+                                <span className="w-3 h-3 rounded-full" style={{ background: "#ffbd2e" }} />
+                                <span className="w-3 h-3 rounded-full" style={{ background: "#27c93f" }} />
+                                <span className="ml-2 text-xs" style={{ color: "var(--text-mute)" }}>shubham@portfolio: ~</span>
+                            </div>
+                            {/* terminal body */}
+                            <div className="p-4 space-y-1.5 leading-relaxed">
+                                <p><span className="accent">$</span> <span style={{ color: "var(--text)" }}>whoami</span></p>
+                                <p style={{ color: "var(--text-dim)" }}>shubham_patil</p>
+                                <p className="pt-1"><span className="accent">$</span> <span style={{ color: "var(--text)" }}>cat role.txt</span></p>
+                                <p style={{ color: "var(--text-dim)" }}>Python Backend Developer</p>
+                                <p className="pt-1"><span className="accent">$</span> <span style={{ color: "var(--text)" }}>cat focus.txt</span></p>
+                                <p style={{ color: "var(--text-dim)" }}>Fintech · Trading Systems · APIs</p>
+                                <p className="pt-1"><span className="accent">$</span> <span style={{ color: "var(--text)" }}>uptime</span></p>
+                                <p style={{ color: "var(--text-dim)" }}>shipping production code since 2025</p>
+                                <p className="pt-1"><span className="accent">$</span> <span className="inline-block w-2 h-4 align-middle animate-pulse" style={{ background: "var(--ac)" }} /></p>
+                            </div>
                         </div>
                     </Reveal>
                 </div>
