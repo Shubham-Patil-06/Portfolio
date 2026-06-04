@@ -1,13 +1,141 @@
 @import "tailwindcss";
 
-body {
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  min-height: 100vh;
-  color: white;
+/* ===== Design tokens (dark, neon-green technical aesthetic) ===== */
+:root {
+  --bg: #0a0a0a;
+  --bg-card: #111111;
+  --bd: #1a1a1a;
+  --bd-hover: #2a2a2a;
+  --ac: #00ff88;
+  --ac-h: #00e07a;
+  --text: #e2e8f0;
+  --text-dim: #94a3b8;
+  --text-mute: #64748b;
+  --card-shd: 0 20px 40px rgba(0, 255, 136, 0.08);
+  --glow: 0 0 30px rgba(0, 255, 136, 0.4);
+  --grid-c: rgba(0, 255, 136, 0.04);
 }
 
-.glass-card {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.125)
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  /* Subtle green technical grid */
+  background-image: linear-gradient(var(--grid-c) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-c) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Monospace utility for technical labels / tags */
+.font-mono {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* ===== Reusable component classes ===== */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--bd);
+  border-radius: 0.75rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+.card:hover {
+  border-color: var(--ac);
+  box-shadow: var(--card-shd);
+}
+
+.accent {
+  color: var(--ac);
+}
+
+.tag {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid var(--bd);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text-dim);
+  transition: all 0.2s ease;
+}
+.tag:hover {
+  border-color: var(--ac);
+  color: var(--ac);
+}
+
+.btn-primary {
+  background: var(--ac);
+  color: #062014;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease;
+}
+.btn-primary:hover {
+  background: var(--ac-h);
+  box-shadow: var(--glow);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  border: 1px solid var(--bd-hover);
+  color: var(--text);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease;
+}
+.btn-ghost:hover {
+  border-color: var(--ac);
+  color: var(--ac);
+  transform: translateY(-2px);
+}
+
+/* Glowing blurred background orbs */
+.glow-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(120px);
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Section heading kicker */
+.kicker {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  color: var(--ac);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+::selection {
+  background: rgba(0, 255, 136, 0.25);
+  color: #fff;
+}
+
+/* Slim custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ac);
 }
