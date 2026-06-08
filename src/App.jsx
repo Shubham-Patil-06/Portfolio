@@ -7,6 +7,7 @@ import Projects from "./sections/Projects";
 import Certifications from "./sections/Certifications";
 import Contact from "./sections/Contact";
 import GuideAvatar from "./components/GuideAvatar";
+import LanyardCard from "./components/LanyardCard";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Certifications />
         <Contact />
       </main>
+      <LanyardCard />
       <GuideAvatar />
     </>
   );
